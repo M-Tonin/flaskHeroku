@@ -28,4 +28,4 @@ Werkzeug==0.12.2
 flake8==3.7.9
 Flask==1.1.1
 Flask-JSON==0.3.4
-requests==2.18.4
+requests==2.20.0
