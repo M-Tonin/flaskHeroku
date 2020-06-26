@@ -7,19 +7,23 @@ app = Flask(__name__)
 dataJson = '{    "ocorrencias":[        {            "id_ocorrencia":1,            "id_dispositivo":1,            "vl_temperatura":26.5,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"10:57:24"        },        {            "id_ocorrencia":2,            "id_dispositivo":1,            "vl_temperatura":25.2,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"10:58:24"        },        {            "id_ocorrencia":3,            "id_dispositivo":1,            "vl_temperatura":26.6,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"10:59:24"        },        {            "id_ocorrencia":4,            "id_dispositivo":1,            "vl_temperatura":25.3,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:00:24"        },        {            "id_ocorrencia":5,            "id_dispositivo":1,            "vl_temperatura":27.7,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:01:24"        },        {            "id_ocorrencia":6,            "id_dispositivo":1,            "vl_temperatura":28.4,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:02:24"        },        {            "id_ocorrencia":7,            "id_dispositivo":1,            "vl_temperatura":25.8,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:03:24"        },        {            "id_ocorrencia":8,            "id_dispositivo":2,            "vl_temperatura":26.5,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:04:24"        },        {            "id_ocorrencia":9,            "id_dispositivo":1,            "vl_temperatura":25.2,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:05:24"        },        {            "id_ocorrencia":10,            "id_dispositivo":1,            "vl_temperatura":26.1,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:06:24"        },        {            "id_ocorrencia":11,            "id_dispositivo":2,            "vl_temperatura":24.8,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:07:24"        },        {            "id_ocorrencia":12,            "id_dispositivo":1,            "vl_temperatura":26.5,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:08:24"        },        {            "id_ocorrencia":13,            "id_dispositivo":2,            "vl_temperatura":24.3,            "vl_luminosidade":400,            "dt_ocorrencia":"2020-06-22",            "hr_ocorrencia":"11:09:24"        }    ],    "ultimoRegDips1":{        "id_ocorrencia":12,        "id_dispositivo":1,        "vl_temperatura":26.5,        "vl_luminosidade":400,        "dt_ocorrencia":"2020-06-22",        "hr_ocorrencia":"11:08:24"    },    "ultimoRegDips2":{        "id_ocorrencia":13,        "id_dispositivo":2,        "vl_temperatura":24.3,        "vl_luminosidade":400,        "dt_ocorrencia":"2020-06-22",        "hr_ocorrencia":"11:09:24"    }}'
 dataJson = json.loads(dataJson)
 
+dataJsonv2 = '{    "ocorrencias":[        {            "temperatura":26.5,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:15:54"        },        {            "temperatura":25.2,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:16:54"        },        {            "temperatura":26.6,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:17:54"        },        {            "temperatura":25.3,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:18:54"        },        {            "temperatura":27.7,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:19:54"        },        {            "temperatura":28.4,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:20:54"        },        {            "temperatura":25.8,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:21:54"        },        {            "temperatura":25.2,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:23:54"        },        {            "temperatura":26.1,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:24:54"        },        {            "temperatura":26.5,            "horaRegistrada":"2020-06-25",            "dataRegistro":"15:26:54"        }    ],    "frequenciaDoDispositivo":15.0}'
+dataJsonv2 = json.loads(dataJsonv2)
+
 JSONdifTemp = '{    "diferencaTemperatura":2.2,    "diferencaMin":1}'
 JSONdifTemp = json.loads(JSONdifTemp)
 
 JSONdevices = '{    "dispositivos":[        {            "idDispositivo":1,            "localDispositivo":"120.0.0.1",            "nomeDispositivo":"IBTI",            "statusLuminosidade":"1"        },        {            "idDispositivo":2,            "localDispositivo":"120.0.0.2",            "nomeDispositivo":"IBTI",            "statusLuminosidade":"1"        }    ]}'
 JSONdevices = json.loads(JSONdevices)
 
+JSONdevicesv2 = '{    "dispositivos":[        {            "idDispositivo":1,            "localDispositivo":"120.0.0.1",            "nomeDispositivo":"IBTI",            "statusLuminosidade":"1"        },        {            "idDispositivo":2,            "localDispositivo":"120.0.0.2",            "nomeDispositivo":"IBTI",            "statusLuminosidade":"1"        }    ],    "ultimaTemperatura":24.3,    "diferencaTemperatura":2.2,    "diferencaMin":1}'
+JSONdevicesv2 = json.loads(JSONdevicesv2)
+
 JSONfreq = '{    "frequenciaDoDispositivo":5.0}'
 JSONfreq = json.loads(JSONfreq)
 
 JSONlastTemp = '{    "ultimaTemperatura":26.5}'
 JSONlastTemp = json.loads(JSONlastTemp)
-
-
 
 def answerTo(appServer, http_code, json_return):
     print("In Function", type(appServer))
@@ -34,7 +38,7 @@ def answerTo(appServer, http_code, json_return):
 '''
 @app.route("/") 
 def home_view(): 
-        return "<h1>Welcome to FINALMENTE EU CONSEGUI</h1>"
+        return "<h1>Welcome to </h1>"
 
 @app.route("/upwifi")
 def upwifi():
@@ -139,6 +143,28 @@ def getTempbyId():
     return resp
 
 
+@app.route("/temperatures_v2", methods = ['GET', 'POST'])
+def getTempbyId_v2():
+    print("metodo get temperature [versao 2]")
+    id_disp = request.get_json()
+    print(f"[v2] ID recebido - {id_disp}")
+    try:
+        id_ = int(id_disp['keyDevice'])
+    except (KeyError, TypeError, ValueError):
+        #raise JsonError(description='Invalid value.')
+        resp = jsonify(success=False)
+        # procurar erro correspondente
+        resp.status_code = 444
+        return resp
+    resp = ""
+    # get dados que eles querem
+    print(f"ID disp = {id_}")
+    resp = jsonify(dataJsonv2)
+    resp.status_code = 200
+    
+    return resp
+
+
 '''
     Aplicacao envia: 
         id_dispositivo = key do dispositivo do qual desejamos obter a frequência de envio atual.
@@ -184,6 +210,14 @@ def devices():
     #
 
     return answerTo(200,JSONdevices)
+
+@app.route("/devices_v2")
+def devices_v2():
+    #
+    # get dados que eles querem
+    #
+
+    return answerTo(200,JSONdevicesv2)
 
 '''
 Enviado pela aplicacao: N/A.
