@@ -32,6 +32,10 @@ def answerTo(appServer, http_code, json_return):
 '''
     Rotas default 
 '''
+@app.route("/") 
+def home_view(): 
+        return "<h1>Welcome to FINALMENTE EU CONSEGUI</h1>"
+
 @app.route("/upwifi")
 def upwifi():
     
